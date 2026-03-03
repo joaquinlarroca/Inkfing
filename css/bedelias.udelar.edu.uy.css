@@ -1,3 +1,4 @@
+/* Start by inspecting https://bedelias.udelar.edu.uy/ and copying classes, id's, selectors to then update their styling */
 #PageWrapper #HeaderWrapper #PageHeader {
     background-color: var(--inkFing-background-200) !important;
     background-position: left !important;

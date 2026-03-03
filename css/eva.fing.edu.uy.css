@@ -1,0 +1,7 @@
+/* Start by inspecting https://eva.fing.edu.uy/ and copying classes, id's, selectors to then update their styling */
+
+/* As an example this adds some text on the footers page */
+.popover-body>div:nth-child(2):after {
+    content: "You are using InkFing";
+    color: #bbb;
+}

@@ -1,0 +1,8 @@
+/* Start by inspecting https://www.fing.edu.uy/ and copying classes, id's, selectors to then update their styling */
+
+/* As an example this adds some text on the footers page */
+.block--pie>div:nth-child(1) > p:nth-child(1):after {
+    margin-left: 1rem;
+    content: "You are using InkFing";
+    color: #bbb;
+}

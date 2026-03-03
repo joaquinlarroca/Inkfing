@@ -19,6 +19,16 @@
             "matches": ["*://*.bedelias.udelar.edu.uy/*"],
             "css": ["css/root.css", "css/bedelias.udelar.edu.uy.css"],
             "run_at": "document_start"
+        },
+        {
+            "matches": ["*://eva.fing.edu.uy/*"],
+            "css": ["css/root.css", "css/eva.fing.edu.uy.css"],
+            "run_at": "document_start"
+        },
+        {
+            "matches": ["*://www.fing.edu.uy/*"],
+            "css": ["css/root.css", "css/www.fing.edu.uy.css"],
+            "run_at": "document_start"
         }
     ]
 }
