@@ -1,3 +1,5 @@
+/* Here lies the main colors InkFing uses through all the css files, try to avoid repeating color codes, properties, etc. 
+Instead define a property/variable in root to be used across everywhere */
 :root {
     --inkFing-background-100: #050505;
     --inkFing-background-200: #111111;
@@ -10,5 +12,4 @@
     --inkFing-color-error: #e50005;
     --inkFing-color-error-content: #fef2f2;
     --inkFing-radius: 4px;
-
 }
