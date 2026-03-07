@@ -6,6 +6,7 @@
     color: var(--inkFing-secondary);
 }
 
+
 .dimmed_text,
 .usersuspended,
 .dimmed_category {
@@ -29,6 +30,13 @@
 .text-info {
     color: var(--inkFing-color-cyan) !important;
 }
+.text-muted{
+    color: var(--inkFing-primary) !important;
+}
+.block .block-cards span.categoryname, .block .block-cards .btn-link{
+    color: var(--inkFing-secondary) !important;
+}
+
 
 .alert-info .btn-close {
     color: var(--inkFing-primary) !important;
@@ -438,9 +446,12 @@ nav.navbar.fixed-top .login a {
     color: var(--inkFing-primary) !important;
     border-color: var(--inkFing-background-300) !important;
 }
+.progress-text{
+color: var(--inkFing-secondary) !important;
+}
 
 .card {
-    background-color: var(--inkFing-background-200) !important;
+    background-color: var(--inkFing-background-100) !important;
     border: 1px solid var(--inkFing-background-300) !important;
 }
 

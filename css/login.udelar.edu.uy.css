@@ -72,3 +72,18 @@ a:visited {
 .column.one {
     margin: 0;
 }
+
+@media only screen and (max-width: 650px) {
+    body{
+        width: 100svw;
+        height: 100svh;
+    }
+    .column.one{
+        width: auto !important;
+    }
+    .container {
+
+        margin: 0 !important;
+        width: 100svw !important;
+    }
+}
