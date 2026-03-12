@@ -32,7 +32,8 @@
         {
             "matches": ["*://eva.fing.edu.uy/*"],
             "css": ["css/root.css", "css/eva.fing.edu.uy.css"],
-            "run_at": "document_start"
+            "run_at": "document_start",
+            "all_frames": true
         },
         {
             "matches": ["*://eva.fing.edu.uy/*"],

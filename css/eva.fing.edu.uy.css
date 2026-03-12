@@ -776,3 +776,100 @@ div[style="background-color: #d6feff;"] {
         width: auto !important;
     }
 }
+
+/* For Message Boxes */
+
+div.tox[role="application"] {
+    border: 2px solid var(--inkFing-background-200) !important;
+
+    div.tox-editor-container {
+
+        /* This changes the header of the editor*/
+        div.tox-editor-header {
+            background-color: var(--inkFing-background-200);
+
+            div {
+                background-color: var(--inkFing-background-200);
+            }
+
+            button {
+                background-color: var(--inkFing-background-200) !important;
+
+                svg {
+                    fill: var(--inkFing-primary);
+
+                    image {
+                        filter: invert(100%);
+                    }
+                }
+
+                span {
+                    color: var(--inkFing-primary);
+                }
+
+                &.tox-tbtn--enabled {
+                    svg {
+                        fill: var(--inkFing-color-aqua) !important
+                    }
+                }
+            }
+        }
+    }
+
+    div.tox-edit-area::before {
+        border: 2px solid var(--inkFing-color-aqua);
+    }
+
+    div.tox-statusbar {
+        background-color: var(--inkFing-background-200);
+        border: none;
+
+        div.tox-statusbar__path-item {
+            color: var(--inkFing-primary);
+        }
+    }
+}
+
+/* For menus */
+div.tox-tiered-menu {
+    div.tox-menu {
+        background-color: var(--inkFing-background-100);
+
+        svg {
+            fill: var(--inkFing-primary);
+        }
+
+        image {
+            filter: invert(100%);
+        }
+
+        div.tox-collection__item-label {
+            color: var(--inkFing-primary);
+        }
+
+        div.tox-collection__item-accessory {
+            color: var(--inkFing-secondary);
+        }
+    }
+
+    div.tox-menu-nav__js.tox-collection__item.tox-collection__item--enabled {
+        background-color: var(--inkFing-background-100);
+        color: var(--inkFing-primary);
+    }
+
+    div.tox-insert-table-picker {
+        background-color: var(--inkFing-background-100);
+
+        span.tox-insert-table-picker__label {
+            color: var(--inkFing-primary);
+        }
+    }
+}
+
+/* For the content */
+iframe#id_message_ifr body {
+    background-color: var(--inkFing-background-200) !important;
+    color: var(--inkFing-primary) !important;
+}
+
+/* End of Message Boxes */
