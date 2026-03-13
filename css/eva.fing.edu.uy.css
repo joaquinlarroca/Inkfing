@@ -6,6 +6,9 @@
     color: var(--inkFing-secondary);
 }
 
+* {
+    scrollbar-color: var(--inkFing-secondary) var(--inkFing-background-300) !important;
+}
 
 .dimmed_text,
 .usersuspended,
@@ -30,10 +33,13 @@
 .text-info {
     color: var(--inkFing-color-cyan) !important;
 }
-.text-muted{
+
+.text-muted {
     color: var(--inkFing-primary) !important;
 }
-.block .block-cards span.categoryname, .block .block-cards .btn-link{
+
+.block .block-cards span.categoryname,
+.block .block-cards .btn-link {
     color: var(--inkFing-secondary) !important;
 }
 
@@ -57,15 +63,19 @@
     outline-color: var(--inkFing-secondary) !important;
     color: var(--inkFing-background-100) !important;
 }
-a[style*="color: rgb(255, 255, 255)"]{
+
+a[style*="color: rgb(255, 255, 255)"] {
     background-color: transparent !important;
 }
-.mform fieldset{
+
+.mform fieldset {
     border-color: var(--inkFing-background-300) !important;
 }
-.userpicture{
+
+.userpicture {
     border-radius: 100% !important;
 }
+
 .notification-area .content-area .header .timestamp {
     color: var(--inkFing-secondary) !important;
 }
@@ -446,8 +456,9 @@ nav.navbar.fixed-top .login a {
     color: var(--inkFing-primary) !important;
     border-color: var(--inkFing-background-300) !important;
 }
-.progress-text{
-color: var(--inkFing-secondary) !important;
+
+.progress-text {
+    color: var(--inkFing-secondary) !important;
 }
 
 .card {
@@ -540,6 +551,30 @@ a>i {
     color: var(--inkFing-background-100) !important;
 }
 
+.btn-info:focus {
+    color: var(--inkFing-primary) !important;
+}
+
+.btn-info {
+    background-color: var(--inkFing-color-aqua) !important;
+    color: var(--inkFing-background-100) !important;
+    border-color: var(--inkFing-color-aqua) !important;
+}
+
+.btn-outline-info:focus,
+.btn-outline-info:hover {
+    color: var(--inkFing-primary) !important;
+}
+
+.btn-outline-info {
+    border-color: var(--inkFing-color-aqua) !important;
+    color: var(--inkFing-primary) !important;
+}
+
+.btn>img {
+    background-color: var(--inkFing-primary);
+}
+
 .dropdown-divider {
     border-color: var(--inkFing-background-300) !important;
 }
@@ -552,12 +587,65 @@ a>i {
     background-color: var(--inkFing-background-100) !important;
 }
 
+div.bg-white {
+    background-color: var(--inkFing-background-100) !important;
+}
+
 .bg-light {
+    background-color: var(--inkFing-background-200) !important;
+}
+
+div.bg-light {
     background-color: var(--inkFing-background-200) !important;
 }
 
 .border {
     border-color: var(--inkFing-background-300) !important;
+}
+
+div.border {
+    border-color: var(--inkFing-background-300) !important;
+}
+
+.courseindex .courseindex-item.pageitem * {
+    color: var(--inkFing-primary) !important;
+}
+
+.content-item-container.unread,
+.forumpost.unread .row.header,
+.path-course-view .unread,
+span.unread {
+    background-color: var(--inkFing-link) !important;
+}
+
+.content-item-container.unread:hover,
+.forumpost.unread .row.header:hover,
+.path-course-view .unread:hover,
+span.unread:hover,
+.content-item-container.unread:focus,
+.forumpost.unread .row.header:focus,
+.path-course-view .unread:focus,
+span.unread:focus {
+    background-color: var(--inkFing-link) !important;
+    border: 1px solid var(--inkFing-primary) !important;
+}
+
+.content-item-container.unread *,
+.forumpost.unread .row.header *,
+.path-course-view .unread *,
+span.unread * {
+    color: var(--inkFing-primary) !important;
+}
+
+.content-item-container.unread *:hover,
+.forumpost.unread .row.header *:hover,
+.path-course-view .unread *:hover,
+span.unread *:hover,
+.content-item-container.unread *:focus,
+.forumpost.unread .row.header *:focus,
+.path-course-view .unread *:focus,
+span.unread *:focus {
+    color: var(--inkFing-primary) !important;
 }
 
 .page-item.active .page-link {
@@ -587,6 +675,12 @@ a>i {
 .grade-report-user .user-grade th.category a.toggle-category:focus>span>i {
     color: var(--inkFing-background-100) !important;
 }
+
+.path-grade-report-user .user-grade tbody tr:hover,
+.grade-report-user .user-grade tbody tr:hover {
+    background-color: var(--inkFing-background-100) !important;
+}
+
 
 .btn.dropdown-toggle {
     color: var(--inkFing-primary) !important;
@@ -622,9 +716,18 @@ a>i {
     background-color: var(--inkFing-background-200) !important;
 }
 
+.courseindex .courseindex-item:hover,
+.courseindex .courseindex-item:focus {
+    color: var(--inkFing-primary) !important;
+}
+
 a:focus {
     background-color: transparent !important;
     box-shadow: none !important;
+}
+
+a[style*="background-color: #ffffff"] {
+    background-color: transparent !important;
 }
 
 *[style*="color: #222;"] {
@@ -682,6 +785,47 @@ div[style*="background: white;"] {
     border-color: var(--inkFing-background-300) !important;
     color: var(--inkFing-primary) !important;
 }
+
+.alert-success,
+.environmenttable .ok {
+    background-color: var(--inkFing-color-lime) !important;
+    border-color: var(--inkFing-background-300) !important;
+    color: var(--inkFing-primary) !important;
+}
+
+.alert-success a,
+.environmenttable .ok a {
+    background-color: var(--inkFing-link) !important;
+    color: var(--inkFing-background-100) !important;
+}
+
+.alert-warning,
+.environmenttable .warn {
+    background-color: var(--inkFing-color-yellow) !important;
+    border-color: var(--inkFing-background-300) !important;
+    color: var(--inkFing-primary) !important;
+}
+
+.alert-warning a,
+.environmenttable .warn a {
+    background-color: var(--inkFing-link) !important;
+    color: var(--inkFing-background-100) !important;
+}
+
+.alert-danger,
+.environmenttable .error {
+    background-color: var(--inkFing-color-tiger) !important;
+    border-color: var(--inkFing-background-300) !important;
+    color: var(--inkFing-background-100) !important;
+}
+
+.alert-danger a,
+.environmenttable .error a {
+    background-color: var(--inkFing-link) !important;
+    color: var(--inkFing-background-100) !important;
+}
+
+
 
 .moremenu .nav-tabs {
     background-color: transparent !important;
