@@ -151,7 +151,17 @@ span[style="color:#2779aa"] {
 .botonIrAlCU.ui-commandlink.ui-widget.botonIrAlCU,
 .botonIrAlCU {
     background: transparent !important;
-    color: var(--inkFing-primary) !important;
+    color: var(--inkFing-link) !important;
+}
+
+.ui-datagrid-column {
+    border-top-color: var(--inkFing-primary) !important;
+}
+
+a.botonIrAlCU.ui-commandlink.ui-widget.botonIrAlCU,
+a.botonIrAlCU {
+    background: transparent !important;
+    color: var(--inkFing-link) !important;
 }
 
 .ui-state-active {
@@ -167,12 +177,31 @@ span[style="color:#2779aa"] {
     color: var(--inkFing-secondary) !important;
 }
 
+div.ui-accordion {
+    background: var(--inkFing-background-200) !important;
+}
+
+div.ui-accordion-header.ui-state-hover {
+    background-color: var(--inkFing-background-100) !important;
+    color: var(--inkFing-secondary) !important;
+}
+
+a.inactividad-button {
+    color: var(--inkFing-background-100) !important;
+}
+
+div.ui-state-active,
+div.ui-widget-content .ui-state-active,
+div.ui-widget-header .ui-state-active {
+    background-color: var(--inkFing-background-100) !important;
+}
+
 .ui-panel-content {
     background: var(--inkFing-background-100) !important;
     color: var(--inkFing-primary) !important;
 }
 
-.tituloNotificacionesPanel {
+span.tituloNotificacionesPanel {
     color: var(--inkFing-primary) !important;
 }
 
@@ -226,22 +255,22 @@ body .ui-overlaypanel {
 
 .ui-datatable-data>tr {
     background-color: transparent !important;
-    color: var(--inkFing-secondary) !important;
+    color: var(--inkFing-primary) !important;
 }
 
 .ui-datatable-data>tr.ui-state-hover {
     background-color: var(--inkFing-background-200) !important;
-    color: var(--inkFing-secondary) !important;
+    color: var(--inkFing-primary) !important;
 }
 
 .tabla_servicios tbody td:hover {
     background-color: var(--inkFing-background-200) !important;
-    color: var(--inkFing-secondary) !important;
+    color: var(--inkFing-primary) !important;
 }
 
 .ui-datatable-data>tr.ui-state-highlight {
     background-color: var(--inkFing-background-200) !important;
-    color: var(--inkFing-secondary) !important;
+    color: var(--inkFing-primary) !important;
 }
 
 .ui-accordion .ui-accordion-header {
@@ -252,14 +281,14 @@ body .ui-overlaypanel {
 
 .ui-widget-header {
     background-color: var(--inkFing-background-100) !important;
-    color: var(--inkFing-secondary) !important;
+    color: var(--inkFing-primary) !important;
 }
 
 .ui-paginator-first,
 body .ui-paginator .ui-paginator-prev,
 body .ui-paginator .ui-paginator-next,
 body .ui-paginator .ui-paginator-last {
-    color: #bbb !important;
+    color: var(--inkFing-primary) !important;
 }
 
 .ui-paginator-first:hover,
@@ -270,11 +299,11 @@ body .ui-paginator .ui-paginator-last:hover {
 }
 
 .ui-state-active {
-    color: #bbb !important;
+    color: var(--inkFing-primary) !important;
 }
 
 .ui-state-active:hover {
-    color: #bbb !important;
+    color: var(--inkFing-primary) !important;
 }
 
 .tituloNombreUsuarioLogueadoSpanCapitalize {
@@ -307,7 +336,7 @@ body .ui-fieldset {
 
 .mensajeEstudianteLogueoTuIDInfo {
     background-color: var(--inkFing-background-100) !important;
-    color: var(--inkFing-secondary) !important;
+    color: var(--inkFing-link) !important;
 }
 
 .informacion {
@@ -322,12 +351,12 @@ body .ui-fieldset {
 
 .tablanivel1 thead th {
     background-color: var(--inkFing-background-100) !important;
-    color: var(--inkFing-secondary) !important;
+    color: var(--inkFing-primary) !important;
 }
 
 body .tablanivel2 tbody td {
     background-color: var(--inkFing-background-100) !important;
-    color: var(--inkFing-secondary) !important;
+    color: var(--inkFing-primary) !important;
 }
 
 .ui-buttonset>div {
@@ -368,5 +397,5 @@ a[style="color: #535353;"] {
 #foot:after {
     margin: 1rem;
     content: "You are using InkFing";
-    color: #bbb;
+    color: var(--inkFing-secondary);
 }
