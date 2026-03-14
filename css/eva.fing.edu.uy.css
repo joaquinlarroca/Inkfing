@@ -835,11 +835,13 @@ div.tox[role="application"] {
             color: var(--inkFing-primary) !important;
         }
         
-        a#yui_3_18_1_1_1773528210398_397 {
-            color: var(--inkFing-color-aqua) !important;
-            
-            svg {
-                fill: var(--inkFing-color-aqua) !important;
+        span.tox-statusbar__branding {
+            a {
+                color: var(--inkFing-color-aqua) !important;
+                
+                svg {
+                    fill: var(--inkFing-color-aqua) !important;
+                }
             }
         }
     }
