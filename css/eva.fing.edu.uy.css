@@ -824,8 +824,23 @@ div.tox[role="application"] {
         background-color: var(--inkFing-background-200);
         border: none;
 
-        div.tox-statusbar__path-item {
+        div.tox-statusbar__path-item, 
+        div.tox-statusbar__path-divider {
             color: var(--inkFing-primary);
+        }
+        
+        button.tox-statusbar__wordcount,
+        button.tox-statusbar__wordcount:hover,
+        button.tox-statusbar__wordcount:active {
+            color: var(--inkFing-primary) !important;
+        }
+        
+        a#yui_3_18_1_1_1773528210398_397 {
+            color: var(--inkFing-color-aqua) !important;
+            
+            svg {
+                fill: var(--inkFing-color-aqua) !important;
+            }
         }
     }
 }
