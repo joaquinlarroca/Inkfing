@@ -3,11 +3,21 @@ body {
     color: var(--inkFing-primary);
 }
 
+p {
+    margin: .5rem;
+    background-color: var(--inkFing-background-100);
+}
+
+a#storage {
+    position: absolute;
+    right: 1rem;
+}
+
 button {
     margin-top: 1rem;
     cursor: pointer;
     color: var(--inkFing-primary);
-    background-color: var(--inkFing-background-200);
+    background-color: var(--inkFing-background-100);
     outline: none;
     border: 1px solid var(--inkFing-background-300);
     padding: .5rem;
@@ -17,4 +27,24 @@ button {
 
 button:hover {
     background-color: var(--inkFing-background-300);
+}
+
+input {
+    padding: .5rem;
+    background-color: var(--inkFing-background-100);
+    border: 1px solid var(--inkFing-background-300);
+    color: var(--inkFing-primary);
+    min-width: 8rem;
+    border-radius: var(--inkFing-radius);
+}
+
+form {
+    border-radius: var(--inkFing-radius);
+    padding: .5rem 1rem;
+    background-color: var(--inkFing-background-200);
+    border: 1px solid var(--inkFing-background-300);
+}
+
+br {
+    margin-top: 1rem;
 }

@@ -1,5 +1,6 @@
 const canvas = document.createElement("canvas");
 const ctx = canvas.getContext("2d", { willReadFrequently: true });
+ctx.imageSmoothingEnabled = true;
 const style = getComputedStyle(document.body)
 const hexToRgb = (hex) => {
     const r = parseInt(hex.slice(1, 3), 16);
@@ -12,7 +13,7 @@ const bg_200 = hexToRgb(style.getPropertyValue("--inkFing-background-200"));
 const primary = hexToRgb(style.getPropertyValue("--inkFing-primary"));
 const secondary = hexToRgb(style.getPropertyValue("--inkFing-secondary"));
 const storagePrefix = "eva.fing.edu.uy/";
-const quality = 4;
+let quality = undefined;
 async function initImage() {
     document.querySelectorAll(".img-fluid").forEach(async (element, i) => {
         const result = await chrome.storage.local.get([`${storagePrefix}${i}`]);
@@ -44,14 +45,22 @@ async function initLogo() {
     });
 }
 async function generateAndSaveImage(element, i, color1, color2, point) {
+    //Updates quality to a number
+    if (quality == undefined) {
+        let res = await chrome.storage.local.get('quality');
+        quality = res.quality || 2.7;
+    }
+    // Init the image
     const img = new Image();
     img.crossOrigin = "anonymous";
     img.src = element.src;
+    // Change Canvas size
     canvas.width = element.width * quality;
     canvas.height = element.height * quality;
-    canvas.style.width = canvas.width;
-    canvas.style.height = canvas.height;
+    canvas.style.width = "auto";
+    canvas.style.height = "auto";
     img.onload = async () => {
+        // Draw the image to the canvas and process its data
         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
         const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
         const data = imageData.data;
@@ -68,6 +77,7 @@ async function generateAndSaveImage(element, i, color1, color2, point) {
                 data[i + 2] = color2.b; // b
             }
         }
+        // Save image and clear Canva
         ctx.putImageData(imageData, 0, 0, 0, 0, canvas.width, canvas.height);
         element.src = canvas.toDataURL("image/png", 1);
         await chrome.storage.local.set({ [i]: canvas.toDataURL("image/png", 1) });

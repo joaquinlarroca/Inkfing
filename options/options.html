@@ -10,12 +10,21 @@
 </head>
 
 <body>
-    <p>storage.useExperimental: <b id="managed-useExperimental">undefined</b></p>
+
+
+    <p>
+        useExperimental: <b id="managed-useExperimental">-</b>, quality: <b id="managed-quality">-</b><a id="storage">-</a>
+    </p>
     <form>
         <label for="colour">Use experimental features?</label>
         <input type="checkbox" id="useExperimental">
         <br>
+        <label for="colour">Quality For Processed Images</label>
+        <input type="number" id="quality" max="4" min="1" step=".1">
+        <br>
         <button type="submit">Save</button>
+        <button type="button" id="reload">Reload</button>
+        <button type="button" id="rls">Reset Local Storage</button>
     </form>
     <script src="options.js"></script>
 </body>
