@@ -10,7 +10,7 @@ const hexToRgb = (hex) => {
 const bg_100 = hexToRgb(style.getPropertyValue("--inkFing-background-100"));
 const primary = hexToRgb(style.getPropertyValue("--inkFing-primary"));
 const storagePrefix = "login.udelar.edu.uy/"
-const quality = 2;
+let quality = undefined;
 async function initImage() {
     document.querySelectorAll("img").forEach(async (element, i) => {
         const result = await chrome.storage.local.get([`${storagePrefix}${i}`]);
@@ -22,6 +22,10 @@ async function initImage() {
     });
 }
 async function generateAndSaveImage(element, i, color1, color2, point) {
+    if (quality == undefined) {
+        let res = await chrome.storage.local.get('quality');
+        quality = res.quality || 2.7;
+    }
     const img = new Image();
     img.crossOrigin = "anonymous";
     img.src = element.src;
