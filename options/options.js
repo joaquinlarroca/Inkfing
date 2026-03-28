@@ -19,7 +19,7 @@ async function restoreOptions() {
         document.querySelector("#managed-quality").innerText = quality.quality || 2.7;
         document.querySelector("#quality").value = quality.quality || 2.7;
     } catch (error) {
-        document.body.innerHTML = `Unexpected managed storage error: ${error.message}`;
+        document.body.innerText = `Unexpected managed storage error: ${error.message}`;
     }
 }
 
