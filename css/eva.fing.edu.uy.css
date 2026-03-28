@@ -1,9 +1,16 @@
 /* Start by inspecting https://eva.fing.edu.uy/ and copying classes, id's, selectors to then update their styling */
 
 /* As an example this adds some text on the footers page */
-.popover-body>div:nth-child(2):after {
+
+.popover-body div.footer-section:nth-child(3) div::after {
     content: "You are using InkFing";
+    display: block;
     color: var(--inkFing-secondary);
+}
+
+.popover-header {
+    background-color: var(--inkFing-background-100) !important;
+    border-color: var(--inkFing-background-300) !important;
 }
 
 * {
@@ -142,7 +149,7 @@ div.eva_botonera:nth-child(3)>a>img {
 
 .all-notifications>div:hover,
 .all-notifications>div:focus {
-    background-color: var(--inkFing-background-300) !important;
+    background-color: var(--inkFing-background-100) !important;
 }
 
 .popover {
@@ -319,7 +326,7 @@ td[bgcolor="#ced4d9"] a {
     color: var(--inkFing-link) !important;
 }
 
-td[bgcolor="#ffe3c2"]  {
+td[bgcolor="#ffe3c2"] {
     background-color: var(--inkFing-color-sky) !important;
     color: var(--inkFing-primary) !important;
 }
@@ -774,7 +781,7 @@ div.border {
 .forumpost.unread .row.header,
 .path-course-view .unread,
 span.unread {
-    background-color: var(--inkFing-link) !important;
+    background-color: var(--inkFing-background-300) !important;
 }
 
 .content-item-container.unread:hover,
@@ -785,26 +792,14 @@ span.unread:hover,
 .forumpost.unread .row.header:focus,
 .path-course-view .unread:focus,
 span.unread:focus {
-    background-color: var(--inkFing-link) !important;
-    border: 1px solid var(--inkFing-primary) !important;
+    background-color: var(--inkFing-background-100) !important;
 }
-
-.content-item-container.unread *,
-.forumpost.unread .row.header *,
-.path-course-view .unread *,
-span.unread * {
+.content-item-container.notification.unread .context-link div div i {
     color: var(--inkFing-primary) !important;
 }
 
-.content-item-container.unread *:hover,
-.forumpost.unread .row.header *:hover,
-.path-course-view .unread *:hover,
-span.unread *:hover,
-.content-item-container.unread *:focus,
-.forumpost.unread .row.header *:focus,
-.path-course-view .unread *:focus,
-span.unread *:focus {
-    color: var(--inkFing-primary) !important;
+.content-item-container:hover .content-item-footer .timestamp {
+    color: var(--inkFing-link) !important;
 }
 
 .page-item.active .page-link {
@@ -951,6 +946,24 @@ div[style*="background: white;"] {
     color: var(--inkFing-primary) !important;
 }
 
+.moodle-dialogue-base .moodle-dialogue-wrap {
+    background-color: var(--inkFing-background-100) !important;
+    border-color: var(--inkFing-background-300) !important;
+}
+
+.moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd {
+    border-color: var(--inkFing-background-300) !important;
+}
+
+.moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd h5 {
+    color: var(--inkFing-primary) !important;
+}
+
+#quiz-timer-wrapper #quiz-timer {
+    border-color: var(--inkFing-color-tiger) !important;
+    background-color: var(--inkFing-background-100) !important;
+}
+
 .alert-success a,
 .environmenttable .ok a {
     background-color: var(--inkFing-link) !important;
@@ -1041,6 +1054,23 @@ button[data-action="toggle-manual-completion"] {
 
 .nav-tabs {
     border-bottom: 1px solid var(--inkFing-background-300) !important;
+}
+
+.que .outcome,
+.que .comment {
+    color: var(--inkFing-primary) !important;
+    background-color: var(--inkFing-color-violet) !important;
+    border-color: var(--inkFing-background-300) !important;
+}
+
+.path-mod-quiz #mod_quiz_navblock .qnbutton.correct,
+.path-mod-quiz #mod_quiz_navblock .qnbutton.correct .trafficlight,
+.path-mod-quiz #mod_quiz_navblock .qnbutton .trafficlight {
+    background-color: var(--inkFing-background-100) !important;
+}
+
+.path-mod-quiz #mod_quiz_navblock .qnbutton.incorrect .thispageholder {
+    border-color: var(--inkFing-color-tiger) !important;
 }
 
 /*Target banners etc*/
