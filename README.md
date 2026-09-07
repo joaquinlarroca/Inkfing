@@ -29,11 +29,8 @@ It's designed to help incoming students find study partners and collaborative pr
 - [https://bedelias.udelar.edu.uy/](https://bedelias.udelar.edu.uy/)
 - [https://eva.fing.edu.uy/](https://eva.fing.edu.uy/)
 - [https://login.udelar.edu.uy/](https://login.udelar.edu.uy/)
-
-### Planned dark-mode support
-
-- [https://www.fing.edu.uy/](https://www.fing.edu.uy/)
 - [https://open.fing.edu.uy/](https://open.fing.edu.uy/)
+- [https://www.fing.edu.uy/](https://www.fing.edu.uy/) (partial)
 
 ### Tech Stack
 
