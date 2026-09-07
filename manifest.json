@@ -40,7 +40,7 @@
         },
         {
             "matches": ["*://eva.fing.edu.uy/*"],
-            "js": ["js/eva.fing.edu.uy.js"],
+            "js": ["js/theme-images.js", "js/eva.fing.edu.uy.js"],
             "run_at": "document_idle"
         },
         {
@@ -55,7 +55,7 @@
         },
         {
             "matches": ["*://login.udelar.edu.uy/*"],
-            "js": ["js/login.udelar.edu.uy.js"],
+            "js": ["js/theme-images.js", "js/login.udelar.edu.uy.js"],
             "run_at": "document_idle"
         },
         {
