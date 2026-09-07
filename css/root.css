@@ -20,6 +20,8 @@ Instead define a property/variable in root to be used across everywhere */
     --inkFing-color-aqua: #008B8B;
     --inkFing-color-tiger: #E65100;
     --inkFing-color-indigo: #4A148C;
+    --inkFing-color-blue: #2196f3;
+    --inkFing-color-error: #E53935;
     --inkFing-radius: 4px;
     --inkFing-background-white: #FFFFFF;
 }
