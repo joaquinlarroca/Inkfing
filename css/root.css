@@ -1,6 +1,7 @@
 /* Here lies the main colors InkFing uses through all the css files, try to avoid repeating color codes, properties, etc. 
 Instead define a property/variable in root to be used across everywhere */
 :root {
+    --inkFing-background-code: #050505;
     --inkFing-background-100: #111213;
     --inkFing-background-200: #1e1e1e;
     --inkFing-background-300: #2a2a2a;

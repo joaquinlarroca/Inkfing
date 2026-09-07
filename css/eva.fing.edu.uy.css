@@ -15,6 +15,26 @@
 * {
     scrollbar-color: var(--inkFing-secondary) var(--inkFing-background-300) !important;
 }
+
+div[style*="background: #eef5ff;"],
+div[style*="background: #eefbf3;"],
+div[style*="background: #fdecec;"],
+div[style*="background: #fff7e6;"]{
+    background-color: var(--inkFing-background-200) !important;
+}
+pre[style*="background: #f6f8fa"]{
+    background-color: var(--inkFing-background-code) !important;
+}
+
+span[style*="background-color: #ffffff;"]{
+    background-color: transparent !important;
+}
+
+#page,
+.pagelayout-maintenance .page-header-headings, .pagelayout-secure .page-header-headings{
+    background-color: var(--inkFing-background-100) !important;
+}
+
 .img-fluid:not([src^="data:"]),
 .img-responsive{
     filter: invert(90%);
