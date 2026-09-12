@@ -11,7 +11,7 @@ function inkFingHexToRgb(color) {
                 r: parseInt(hex[0] + hex[0], 16),
                 g: parseInt(hex[1] + hex[1], 16),
                 b: parseInt(hex[2] + hex[2], 16),
-                a: 1
+                a: 1,
             };
         }
         if (hex.length === 6) {
@@ -19,7 +19,7 @@ function inkFingHexToRgb(color) {
                 r: parseInt(hex.slice(0, 2), 16),
                 g: parseInt(hex.slice(2, 4), 16),
                 b: parseInt(hex.slice(4, 6), 16),
-                a: 1
+                a: 1,
             };
         }
         if (hex.length === 8) {
@@ -27,18 +27,20 @@ function inkFingHexToRgb(color) {
                 r: parseInt(hex.slice(0, 2), 16),
                 g: parseInt(hex.slice(2, 4), 16),
                 b: parseInt(hex.slice(4, 6), 16),
-                a: parseInt(hex.slice(6, 8), 16) / 255
+                a: parseInt(hex.slice(6, 8), 16) / 255,
             };
         }
     }
-    const match = color.match(/rgba?\([\s]*([\d.]+)[,\s]+([\d.]+)[,\s]+([\d.]+)(?:[,\s/]+([\d.]+%?))?[\s]*\)/i);
+    const match = color.match(
+        /rgba?\([\s]*([\d.]+)[,\s]+([\d.]+)[,\s]+([\d.]+)(?:[,\s/]+([\d.]+%?))?[\s]*\)/i,
+    );
     if (match) {
         const alpha = match[4] === undefined ? 1 : parseFloat(match[4]);
         return {
             r: parseInt(match[1], 10),
             g: parseInt(match[2], 10),
             b: parseInt(match[3], 10),
-            a: Number.isNaN(alpha) ? 1 : alpha
+            a: Number.isNaN(alpha) ? 1 : alpha,
         };
     }
     return { r: 0, g: 0, b: 0, a: 0 };
@@ -63,12 +65,22 @@ function themeImage(element, key, color1, color2, point) {
             try {
                 const quality = await getQuality();
                 const canvas = document.createElement("canvas");
-                const ctx = canvas.getContext("2d", { willReadFrequently: true });
+                const ctx = canvas.getContext("2d", {
+                    willReadFrequently: true,
+                });
                 ctx.imageSmoothingEnabled = true;
                 canvas.width = Math.max(1, Math.round(element.width * quality));
-                canvas.height = Math.max(1, Math.round(element.height * quality));
+                canvas.height = Math.max(
+                    1,
+                    Math.round(element.height * quality),
+                );
                 ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-                const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                const imageData = ctx.getImageData(
+                    0,
+                    0,
+                    canvas.width,
+                    canvas.height,
+                );
                 const data = imageData.data;
                 for (let i = 0; i < data.length; i += 4) {
                     const avg = (data[i] + data[i + 1] + data[i + 2]) / 3;

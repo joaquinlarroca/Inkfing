@@ -16,7 +16,7 @@ footer {
     bottom: 1rem;
 }
 
-footer>div {
+footer > div {
     width: auto !important;
 }
 
@@ -74,15 +74,14 @@ a:visited {
 }
 
 @media only screen and (max-width: 650px) {
-    body{
+    body {
         width: 100svw;
         height: 100svh;
     }
-    .column.one{
+    .column.one {
         width: auto !important;
     }
     .container {
-
         margin: 0 !important;
         width: 100svw !important;
     }

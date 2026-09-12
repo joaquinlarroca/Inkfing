@@ -1,4 +1,4 @@
-.block--pie>div:nth-child(1) > p:nth-child(1):after {
+.block--pie > div:nth-child(1) > p:nth-child(1):after {
     margin-left: 1rem;
     content: "You are using InkFing";
     color: var(--inkFing-secondary);

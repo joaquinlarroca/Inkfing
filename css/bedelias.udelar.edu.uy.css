@@ -65,7 +65,7 @@ nav ul li ul {
     border-radius: 16px !important;
 }
 
-nav ul li ul>* {
+nav ul li ul > * {
     border-radius: 0px !important;
 }
 
@@ -82,7 +82,7 @@ body .ui-tabs .ui-tabs-panels {
     background-color: transparent !important;
 }
 
-body .ui-tabs.ui-tabs-top>.ui-tabs-nav li.ui-tabs-header.ui-state-active {
+body .ui-tabs.ui-tabs-top > .ui-tabs-nav li.ui-tabs-header.ui-state-active {
     border-color: var(--inkFing-primary) !important;
     background-color: var(--inkFing-background-300) !important;
 }
@@ -252,12 +252,12 @@ body .ui-overlaypanel {
     background-color: var(--inkFing-background-100) !important;
 }
 
-.ui-datatable-data>tr {
+.ui-datatable-data > tr {
     background-color: transparent !important;
     color: var(--inkFing-primary) !important;
 }
 
-.ui-datatable-data>tr.ui-state-hover {
+.ui-datatable-data > tr.ui-state-hover {
     background-color: var(--inkFing-background-200) !important;
     color: var(--inkFing-primary) !important;
 }
@@ -267,7 +267,7 @@ body .ui-overlaypanel {
     color: var(--inkFing-primary) !important;
 }
 
-.ui-datatable-data>tr.ui-state-highlight {
+.ui-datatable-data > tr.ui-state-highlight {
     background-color: var(--inkFing-background-200) !important;
     color: var(--inkFing-primary) !important;
 }
@@ -358,17 +358,17 @@ body .tablanivel2 tbody td {
     color: var(--inkFing-primary) !important;
 }
 
-.ui-buttonset>div {
+.ui-buttonset > div {
     border-radius: 0px !important;
 }
 
 .ui-messages-info,
 .ui-message-info {
-    background-color: var(--inkFing-background-100) !important;
+background-color: var(--inkFing-background-100) !important;
     color: var(--inkFing-secondary) !important;
 }
 
-.mensajesAdvertencia>a:nth-child(2) {
+.mensajesAdvertencia > a:nth-child(2) {
     color: var(--inkFing-color-blue) !important;
 }
 
@@ -398,21 +398,22 @@ a[style="color: #535353;"] {
     content: "You are using InkFing";
     color: var(--inkFing-secondary);
 }
-.nroControlColumna{
+.nroControlColumna {
     background-color: var(--inkFing-background-100) !important;
 }
 
-.ui-selectcheckboxmenu{
+.ui-selectcheckboxmenu {
     background-color: var(--inkFing-background-100) !important;
     border-color: var(--inkFing-background-300) !important;
 }
-.ui-selectcheckboxmenu .ui-state-hover{
+.ui-selectcheckboxmenu .ui-state-hover {
     background-color: var(--inkFing-background-100) !important;
-
 }
-.ui-selectcheckboxmenu-panel{
+.ui-selectcheckboxmenu-panel {
     background-color: var(--inkFing-background-200) !important;
 }
-.ui-selectcheckboxmenu-panel .ui-selectcheckboxmenu-items .ui-selectcheckboxmenu-item{
+.ui-selectcheckboxmenu-panel
+    .ui-selectcheckboxmenu-items
+    .ui-selectcheckboxmenu-item {
     color: var(--inkFing-primary) !important;
 }

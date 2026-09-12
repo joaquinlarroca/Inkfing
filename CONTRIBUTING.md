@@ -6,8 +6,8 @@ Thanks for wanting to help improve InkFing!
 
 1. Fork the repository and clone your fork locally.
 2. Load the extension in your browser:
-   - Chrome: [Load an unpacked extension](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked) -> select the repo folder.
-   - Firefox: follow the [temporary add-on](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#installing) guide.
+    - Chrome: [Load an unpacked extension](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked) -> select the repo folder.
+    - Firefox: follow the [temporary add-on](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#installing) guide.
 3. Pick an issue to work on, or open a new one for the problem you found.
 
 ## Where things live
@@ -23,7 +23,7 @@ Thanks for wanting to help improve InkFing!
 
 - **CSS**: favor the `--inkFing-*` variables from `root.css`. Content-script overrides must beat the site's stylesheets, so `!important` is expected there.
 - **JS**: keep site scripts thin — put anything reusable in a shared file (e.g. `theme-images.js`) and load it from `manifest.json` before the site script.
-- Don't add comments that just repeat the code; document *why*, not *what*.
+- Don't add comments that just repeat the code; document _why_, not _what_.
 
 ## Checking your work
 

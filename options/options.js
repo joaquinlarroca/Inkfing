@@ -4,22 +4,28 @@ const QUALITY_MAX = 4;
 async function saveOptions(e) {
     e.preventDefault();
 
-    const quality = Math.min(QUALITY_MAX, Math.max(QUALITY_MIN, Number(document.querySelector("#quality").value)));
+    const quality = Math.min(
+        QUALITY_MAX,
+        Math.max(QUALITY_MIN, Number(document.querySelector("#quality").value)),
+    );
     await chrome.storage.local.set({
         useExperimental: document.querySelector("#useExperimental").checked,
-        quality
+        quality,
     });
     restoreOptions();
 }
 
 async function restoreOptions() {
     try {
-        document.getElementById("storage").innerText = `${((await chrome.storage.local.getBytesInUse()) * 1e-6).toFixed(2)} MB`;
-        let useExperimental = await chrome.storage.local.get('useExperimental');
-        document.querySelector("#managed-useExperimental").innerText = useExperimental.useExperimental || false;
-        document.querySelector("#useExperimental").checked = useExperimental.useExperimental || false;
+        document.getElementById("storage").innerText =
+            `${((await chrome.storage.local.getBytesInUse()) * 1e-6).toFixed(2)} MB`;
+        let useExperimental = await chrome.storage.local.get("useExperimental");
+        document.querySelector("#managed-useExperimental").innerText =
+            useExperimental.useExperimental || false;
+        document.querySelector("#useExperimental").checked =
+            useExperimental.useExperimental || false;
 
-        let quality = await chrome.storage.local.get('quality');
+        let quality = await chrome.storage.local.get("quality");
         const value = Number(quality.quality) || 2.7;
         document.querySelector("#managed-quality").innerText = value;
         document.querySelector("#quality").value = value;
@@ -37,7 +43,7 @@ async function clearSiteImages(prefix) {
     restoreOptions();
 }
 
-document.addEventListener('DOMContentLoaded', restoreOptions);
+document.addEventListener("DOMContentLoaded", restoreOptions);
 document.querySelector("form").addEventListener("submit", saveOptions);
 document.getElementById("rls").addEventListener("click", () => {
     chrome.storage.local.clear();

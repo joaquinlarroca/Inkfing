@@ -51,8 +51,8 @@ body {
     filter: grayscale(100%) invert(100%) !important;
 }
 
-.pagina-curso .distribucion-curso>.listado-clases-curso,
-.pagina-clase .distribucion-curso>.listado-clases-curso,
+.pagina-curso .distribucion-curso > .listado-clases-curso,
+.pagina-clase .distribucion-curso > .listado-clases-curso,
 .pagina-curso,
 .pagina-clase,
 .pagina-curso .unidad-curricular,
@@ -69,7 +69,7 @@ body {
     color: var(--inkFing-primary) !important;
 }
 
-.clase-enlace.clase-enlace-activo>div {
+.clase-enlace.clase-enlace-activo > div {
     background-color: var(--inkFing-background-300) !important;
     border-color: var(--inkFing-background-100) !important;
 }
@@ -101,7 +101,9 @@ body {
     border-color: transparent !important;
 }
 
-.tarjeta-metadatos-clase--colapsable:not(.tarjeta-metadatos-clase--expandida):hover {
+.tarjeta-metadatos-clase--colapsable:not(
+        .tarjeta-metadatos-clase--expandida
+    ):hover {
     background-color: var(--inkFing-background-200) !important;
     border-color: var(--inkFing-background-300) !important;
 }
@@ -159,7 +161,7 @@ input {
 }
 
 .pregunta-faq,
-.pregunta-faq>* {
+.pregunta-faq > * {
     background-color: var(--inkFing-background-200) !important;
     border-color: var(--inkFing-background-300) !important;
     color: var(--inkFing-primary) !important;
@@ -222,18 +224,25 @@ footer {
     background-color: var(--inkFing-background-200) !important;
 }
 
-.respuesta-faq>p {
+.respuesta-faq > p {
     color: var(--inkFing-primary) !important;
 }
 
 .seccion-buscador::before {
     background-color: var(--inkFing-background-100) !important;
 }
-.pagina-curso .distribucion-curso--con-detalle > [data-panel-lista-clases] > .lista-cursos-con-scroll, .pagina-clase .distribucion-curso--con-detalle > [data-panel-lista-clases] > .lista-cursos-con-scroll{
+.pagina-curso
+    .distribucion-curso--con-detalle
+    > [data-panel-lista-clases]
+    > .lista-cursos-con-scroll,
+.pagina-clase
+    .distribucion-curso--con-detalle
+    > [data-panel-lista-clases]
+    > .lista-cursos-con-scroll {
     background-color: var(--inkFing-background-100) !important;
 }
 @media (min-width: 995px) {
-  .pagina-clase .tarjeta-metadatos-clase--expandida {
-    background-color: var(--inkFing-background-200) !important;
-  }
+    .pagina-clase .tarjeta-metadatos-clase--expandida {
+        background-color: var(--inkFing-background-200) !important;
+    }
 }

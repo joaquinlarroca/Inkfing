@@ -102,18 +102,24 @@ for (const file of fs.readdirSync(path.join(root, "css"))) {
 
     const unbalanced = braceBalance(source);
     if (unbalanced !== 0) {
-        errors.push(`${relativePath}: unbalanced braces (depth ${unbalanced} != 0)`);
+        errors.push(
+            `${relativePath}: unbalanced braces (depth ${unbalanced} != 0)`,
+        );
     }
 
     for (const match of clean.matchAll(/var\(\s*(--[\w-]+)/g)) {
         if (!definedVariables.has(match[1])) {
-            errors.push(`${relativePath}:${lineAt(clean, match.index)} undefined variable ${match[1]}`);
+            errors.push(
+                `${relativePath}:${lineAt(clean, match.index)} undefined variable ${match[1]}`,
+            );
         }
     }
 
     const nthChild = clean.match(/:nth-child\(0\)/);
     if (nthChild) {
-        errors.push(`${relativePath}:${lineAt(clean, nthChild.index)} :nth-child(0) matches nothing, use :first-child`);
+        errors.push(
+            `${relativePath}:${lineAt(clean, nthChild.index)} :nth-child(0) matches nothing, use :first-child`,
+        );
     }
 }
 
@@ -125,7 +131,9 @@ if (optionsBalanced !== 0) {
 }
 
 if (errors.length === 0) {
-    console.log("OK: manifest.json valid, CSS braces balanced, all CSS variables defined.");
+    console.log(
+        "OK: manifest.json valid, CSS braces balanced, all CSS variables defined.",
+    );
 } else {
     for (const error of errors) console.error(`ERROR: ${error}`);
     process.exit(1);
